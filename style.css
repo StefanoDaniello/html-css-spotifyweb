@@ -82,6 +82,13 @@ button:hover{
 .logo :last-child{
     display: none;
 }
+.sidebar span{
+   color: var(--color-nav-text-color);
+   cursor: pointer;
+}
+.sidebar span:hover{
+    color: var(--color-primary);
+}
 
 
 /* main  */
@@ -172,10 +179,14 @@ nav{
 .text-center{
     text-align: center;
 }
-/* border */
+/* border-green */
 .border-light-green:hover{
     border-bottom: 2px solid var(--color-light-green);
 }
+.left-border:hover{
+    border-left: 2px solid var(--color-light-green);
+}
+
 .circle{
     border-radius: 100%;
     overflow: hidden;
@@ -203,6 +214,9 @@ nav{
 .align-items{
     align-items: center;
 }
+.wrap{
+    flex-wrap:wrap;
+}
 
 /* padding  */
 
@@ -214,8 +228,8 @@ nav{
     margin: 20px 0px;
 }
 
-.wrap{
-    flex-wrap:wrap;
+.padding-sidebar-text{
+    padding: 10px 0px 10px 10px;
 }
 
 @media screen and (max-width:1200px){
