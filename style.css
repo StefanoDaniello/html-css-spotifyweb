@@ -86,10 +86,30 @@ button:hover{
    color: var(--color-nav-text-color);
    cursor: pointer;
 }
-.sidebar span:hover{
+.sidebar .hover-white:hover span{
+    color: var(--color-primary);
+}
+.sidebar h4{
     color: var(--color-primary);
 }
 
+.fa-plus{
+    background-color: var(--color-nav-text-color);
+    color: var(--color-secondary);
+    padding: 10px;
+}
+.hover-white{
+    cursor: pointer;
+}
+.plus-playlist{
+    cursor: pointer;
+}
+.plus-playlist:hover .fa-plus{
+    background-color: var(--color-primary);
+}
+.plus-playlist:hover span{
+    color: var(--color-primary);
+}
 
 /* main  */
 
@@ -227,10 +247,13 @@ nav{
 .margin-t-b-20{
     margin: 20px 0px;
 }
-
+.padding-t-b-10{
+    padding: 10px 0px;
+}
 .padding-sidebar-text{
     padding: 10px 0px 10px 10px;
 }
+
 
 @media screen and (max-width:1200px){
     .img-container i{
@@ -309,5 +332,14 @@ nav{
     .logo :last-child{
         display:flex;
         width: 30px;
+    }
+    .sidebar i{
+        font-size: 20px;
+    }
+    .text{
+        display: none;
+    }
+    .playlist-container{
+        display: none;
     }
 }
