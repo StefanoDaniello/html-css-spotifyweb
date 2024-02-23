@@ -107,6 +107,7 @@ h2{
 .card-container{
     width: 100%;
     gap: 20px;
+
 }
 
 .card{
@@ -122,8 +123,8 @@ h2{
 .img-container i{
     display: none;
     position: absolute;
-    top: 80px;
-    left: 80px;
+    top: 30%;
+    width: 100%;
     font-size: 100px;
     color: white;
 }
@@ -132,6 +133,7 @@ h2{
 } 
 .img-container:hover i{
     display: flex;
+    justify-content: center;
 }
 
 
@@ -204,31 +206,67 @@ nav{
     margin: 20px 0px;
 }
 
-@media screen and (max-width:1200px){
-    
+.wrap{
+    flex-wrap:wrap;
 }
 
-@media screen and (max-width:992px) {
-    .card-container{
-        width: 100%;
-        gap: 20px; 
-       
+@media screen and (max-width:1200px){
+    .img-container i{
+        position: absolute;
+        top: 30%;
+        font-size: 50px;
+    }
+    .img-container:hover i{
+        display: flex;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width:992px){
+    .card-container{ 
+        flex-wrap: wrap;
     }
 
     .card{
-        width: calc(100% / 4 - 20);
-        display: flex;
-        flex-wrap: wrap;
+        width: calc(100% / 4 - 20px);
     }
-    
+    .img-container i{
+        position: absolute;
+        top: 30%;
+        font-size: 50px;
+    }
+    .img-container:hover i{
+        display: flex;
+        justify-content: center;
+    }
 }
 
 
-@media screen and (max-width:768px) {
-    
+@media screen and (max-width:768px){
+
+    .card{
+        width: calc(100% / 2 - 20px);
+    }
+    .img-container i{
+        position: absolute;
+        top:30%;
+        font-size: 80px;
+    }
+    .img-container:hover i{
+        display: flex;
+        justify-content: center;
+    }
 }
 
 
-@media screen and (max-width:576px) {
-    
+@media screen and (max-width:576px){
+    .img-container i{
+        position: absolute;
+        top: 30%;
+        font-size: 50px;
+    }
+    .img-container:hover i{
+        display: flex;
+        justify-content: center;
+    }
 }
