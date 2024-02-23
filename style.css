@@ -75,6 +75,14 @@ button:hover{
     background-color: var(--color-secondary);
     /* flex-shrink: 0; */
 }
+.logo{
+    width: 150px;
+    padding: 10px 0px 10px 10px;
+}
+.logo :last-child{
+    display: none;
+}
+
 
 /* main  */
 
@@ -260,6 +268,9 @@ nav{
 
 
 @media screen and (max-width:576px){
+    main{
+        width: calc(100% - 50px);
+    }
     .img-container i{
         position: absolute;
         top: 30%;
@@ -268,5 +279,21 @@ nav{
     .img-container:hover i{
         display: flex;
         justify-content: center;
+    }
+    .sidebar{
+        width:50px;
+    }
+    .logo{
+        width: 50px;
+        display: flex;
+        justify-content: center;
+        padding: 10px 0px 10px 0px;
+    }
+    .logo :first-child{
+        display: none;
+    }
+    .logo :last-child{
+        display:flex;
+        width: 30px;
     }
 }
