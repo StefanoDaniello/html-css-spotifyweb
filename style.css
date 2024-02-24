@@ -180,17 +180,21 @@ h2{
 .img-container i{
     display: none;
     position: absolute;
-    top: 30%;
-    width: 100%;
+    top: 0%;
     font-size: 100px;
     color: white;
+    margin: 0 auto;
 }
 .img-container img:hover{
-    opacity: 0.4;
+    opacity: 0.5;
 } 
 .img-container:hover i{
     display: flex;
     justify-content: center;
+    align-items: center;
+    background-color:rgba(0, 0, 0, 0.5);
+    height: 99%;
+    width: 100%;
 }
 
 
@@ -397,14 +401,9 @@ nav{
 
 @media screen and (max-width:1200px){
     .img-container i{
-        position: absolute;
-        top: 30%;
         font-size: 50px;
     }
-    .img-container:hover i{
-        display: flex;
-        justify-content: center;
-    }
+
     .app-download{
         padding-top: 10%;
     }
@@ -419,14 +418,9 @@ nav{
         width: calc(100% / 4 - 20px);
     }
     .img-container i{
-        position: absolute;
-        top: 30%;
         font-size: 50px;
     }
-    .img-container:hover i{
-        display: flex;
-        justify-content: center;
-    }
+
  
 }
 
@@ -437,14 +431,9 @@ nav{
         width: calc(100% / 2 - 20px);
     }
     .img-container i{
-        position: absolute;
-        top:30%;
         font-size: 80px;
     }
-    .img-container:hover i{
-        display: flex;
-        justify-content: center;
-    }
+
 
 }
 
@@ -458,14 +447,9 @@ nav{
         width: calc(100% - 50px);
     }
     .img-container i{
-        position: absolute;
-        top: 30%;
         font-size: 50px;
     }
-    .img-container:hover i{
-        display: flex;
-        justify-content: center;
-    }
+
     .sidebar{
         width:50px;
     }
