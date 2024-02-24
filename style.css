@@ -424,6 +424,8 @@ nav{
 }
 
 
+
+
 @media screen and (max-width:1200px){
     .img-container i{
         font-size: 50px;
@@ -503,5 +505,28 @@ nav{
     .app-download{
         padding-top: 750%;
     }
+    /* #voice{
+        display: none;
+    }
+    
+    #voice{
+        transform: rotate(-90deg);
+        position: absolute;
+        top: 0;
+        padding-left: 40px;
+    padding-bottom: 20px;
+    }   */
 
+    #voice{
+        display: none;
+    }
+
+    .volume-container:hover #voice{
+        transform: rotate(-90deg);
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin-right: 10px;
+        display: block;
+    }  
 }
