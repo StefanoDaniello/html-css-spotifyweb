@@ -158,13 +158,13 @@ h2{
     color: var(--color-nav-text-color);
 }
 
+/* playlist  */
 #playlist{
     padding-top: 20px;
 }
 .card-container{
     width: 100%;
     gap: 20px;
-
 }
 
 .card{
@@ -183,11 +183,9 @@ h2{
     top: 0%;
     font-size: 100px;
     color: white;
-    margin: 0 auto;
+    cursor: pointer;
 }
-.img-container img:hover{
-    opacity: 0.5;
-} 
+
 .img-container:hover i{
     display: flex;
     justify-content: center;
@@ -229,7 +227,9 @@ nav{
 }
 .right{
     width: 20%;
+    padding-top: 30px;
 }
+
 .img-text{
     width: 100%;
 }
@@ -264,15 +264,16 @@ nav{
     padding: 0% 2%;
     font-size: 30px;
 }
+
+/* down  */
 .down{
     width: 100%;
     display: flex;
-    justify-content: center;
     align-items: center;
 }
 
 .fa-circle{
-    display: none;
+     display: none; 
     color: var(--color-primary);
 }
 
@@ -280,22 +281,20 @@ nav{
     position: absolute;
     top: 5;
 }
-.down:hover .fa-circle{
+.circle-hover:hover .fa-circle{
     display: flex;
-    justify-content: center;
 }
 
-.down span{
+.timeline span{
     color: var(--color-primary);
-    padding: 0px 20px;
+    padding: 0% 2%;
 }
 .timeline-song{
     border: 3px solid var(--color-nav-text-color);
     width: 100%;
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px;
+    border-radius: 10px;
 }
-.down:hover .small-timeline-song{
+.down:hover,.timeline-song-container:hover .small-timeline-song{
     border-color: var(--color-light-green);
 }
 .small-timeline-song{
@@ -303,6 +302,32 @@ nav{
     width: 100%;
     border-radius: 10px;
 }
+.volume-container{
+    width: 15%;
+    padding: 0px 5px;
+}
+.volume-container span{
+    padding: 0% 3%;
+    color: var(--color-primary);
+}
+
+.small-timeline-song-conteiner{
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    position: absolute;
+    top: 5;
+}
+.small-timeline-voice-conteiner{
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    position: absolute;
+    top: 0;
+}
+
 /* text  */
 .text-center{
     text-align: center;
