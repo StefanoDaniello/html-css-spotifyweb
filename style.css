@@ -38,7 +38,7 @@ body{
 
 .wrapper{
     height: 100vh;
-    background-color: orange;
+    overflow: hidden;
     /* overflow: hidden; */
 }
 
@@ -121,12 +121,11 @@ button:hover{
   align-items: center;
 }
 .fa-arrow-down{
-    font-size: 5px;
+    font-size: 10%;
 }
 .fa-user{
-    font-size: 15px;
+    font-size: 100%;
 }
-
 
 .app-download{
     padding-top: 100%;
@@ -202,15 +201,15 @@ h2{
 
 /* nav  */
 
-nav div span a{
+nav ul li{
+    padding: 0 10px 10px 10px;
+}
+nav ul li a{
     color: var(--color-nav-text-color);
-    font-size: small;
+    text-transform: uppercase;
 }
 
-nav{
-    gap: 20px;
-    max-height: 20px;
-}
+
 
 /* toolbar  */
 #toolbar{
@@ -224,6 +223,10 @@ nav{
 
 .left{
     width:80%;
+}
+#music a:hover{
+    text-decoration: underline;
+    color: var(--color-primary);
 }
 .right{
     width: 20%;
@@ -264,7 +267,9 @@ nav{
     padding: 0% 2%;
     font-size: 30px;
 }
-
+.top span:hover{
+    transform: scale(1.2);
+}
 /* down  */
 .down{
     width: 100%;
@@ -294,7 +299,13 @@ nav{
     width: 100%;
     border-radius: 10px;
 }
-.down:hover,.timeline-song-container:hover .small-timeline-song{
+.timeline-voice{
+    border: 3px solid var(--color-nav-text-color);
+    width: 100px;
+    border-radius: 10px;
+}
+.down:hover .small-timeline-song, 
+#voice:hover .small-timeline-song{
     border-color: var(--color-light-green);
 }
 .small-timeline-song{
@@ -303,7 +314,7 @@ nav{
     border-radius: 10px;
 }
 .volume-container{
-    width: 15%;
+    width: 200px;
     padding: 0px 5px;
 }
 .volume-container span{
@@ -336,11 +347,20 @@ nav{
     vertical-align: middle;
 }
 /* border-green */
-.border-light-green:hover{
-    border-bottom: 2px solid var(--color-light-green);
+.border-light-green{
+    border-bottom: 2px solid transparent;
+    width: 50%;
+    margin-left: 25%;
+}
+ nav ul li:hover .border-light-green{
+    border-color: var(--color-light-green);
+}
+
+.left-border{
+    border-left: 2px solid transparent;
 }
 .left-border:hover{
-    border-left: 2px solid var(--color-light-green);
+    border-color: var(--color-light-green);
 }
 .border-b{
     border-bottom: 1px solid var(--color-primary);
@@ -493,7 +513,7 @@ nav{
         display:flex;
         width: 30px;
     }
-    .sidebar i{
+    .sidebar i:not(.fa-arrow-down,.fa-user){
         font-size: 20px;
     }
     .text{
@@ -505,18 +525,7 @@ nav{
     .app-download{
         padding-top: 750%;
     }
-    /* #voice{
-        display: none;
-    }
-    
-    #voice{
-        transform: rotate(-90deg);
-        position: absolute;
-        top: 0;
-        padding-left: 40px;
-    padding-bottom: 20px;
-    }   */
-
+ 
     #voice{
         display: none;
     }
@@ -526,7 +535,7 @@ nav{
         position: absolute;
         top: 0;
         right: 0;
-        margin-right: 10px;
         display: block;
+        margin: 10%;
     }  
 }

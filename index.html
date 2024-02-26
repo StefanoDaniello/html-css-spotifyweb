@@ -117,25 +117,33 @@
                 
             </div>
             <main>
-                <nav class="d-flex f-center wrap padding-b-50">
-                    <div class="border-light-green ">
-                        <span><a href="#">IN EVIDENZA</a></span>
-                    </div>
-                    <div class="border-light-green ">
-                        <span><a href="#">PODCAST</a></span>
-                    </div>
-                    <div class="border-light-green ">
-                        <span><a href="#">CLASSIFICHE</a></span>
-                    </div>
-                    <div class="border-light-green ">
-                        <span><a href="#recommended">GENERI E MOOD</a></span>
-                    </div>
-                    <div class="border-light-green ">
-                        <span><a href="#">NUOVE USCITE</a></span>
-                    </div>
-                    <div class="border-light-green ">
-                        <span><a href="#popular">SCOPRI</a></span>
-                    </div>
+                <nav class="d-flex f-center wrap">
+                    <ul class="d-flex f-center wrap">
+                        <li>
+                            <a href="#">in evidenzia</a>
+                            <div class="border-light-green"></div>
+                        </li>
+                        <li>
+                            <a href="#">podcast</a>
+                            <div class="border-light-green"></div>
+                        </li>
+                        <li>
+                            <a href="#">classifiche</a>
+                            <div class="border-light-green"></div>
+                        </li>
+                        <li>
+                            <a href="#recommended">generi e mood</a>
+                            <div class="border-light-green"></div>
+                        </li>
+                        <li>
+                            <a href="#">nuove uscite</a>
+                            <div class="border-light-green"></div>
+                        </li>
+                        <li>
+                            <a href="#popular">scopri</a>
+                            <div class="border-light-green"></div>
+                        </li>
+                    </ul>
                 </nav>
                 <section id="playlist" class="padding-b-40">
                     <h2>Recently played</h2>
@@ -247,18 +255,19 @@
         </div>
 
         <div id="toolbar" class="d-flex space-bet ">
+
             <div class="d-flex" id="music">
                 <div class="d-flex align-items left">
                     <div class="img-toolbar">
                         <img src="img/sinister.jpeg" alt="sinister">
                     </div>
                     <div class="img-text">
-                        <h4>Sinister</h4>
-                        <p>Brano Norme</p>
+                        <a href="#"><h4>Sinister</h4></a>
+                        <a href="#"><p>Brano Norme</p></a>
                     </div>
                 </div>
                 <div class="right">
-                    <span ><i class="fa-regular fa-heart"></i></span>
+                    <span><i class="fa-regular fa-heart"></i></span>
                     <span><i class="fa-regular fa-folder"></i></span>
                 </div>
             </div>
@@ -272,17 +281,10 @@
                     <span><i class="fa-solid fa-rotate-right"></i></span>
                 </div>
 
-                <!-- <div class="down p-relative circle-hover">
-                    <span>0:25</span>
-                    <div class="small-timeline-song"></div>
-                    <i class="fa-solid fa-circle"></i>
-                    <div class="timeline-song"></div>
-                    <span>4:35</span>
-                </div> -->
-
                 <div class="d-flex timeline">
                     <span>0:25</span>
-                    <div class=" down p-relative circle-hover">
+
+                    <div class="down p-relative circle-hover">
                         <div class="timeline-song"></div>
                         <div class="small-timeline-song-conteiner">
                             <i class="fa-solid fa-circle"></i>
@@ -293,22 +295,19 @@
                 </div>
             </div>
 
-
             <div class="d-flex align-items volume-container p-relative">
                 <span><i class="fa-solid fa-bars"></i></span>
                 <span><i class="fa-solid fa-desktop"></i></span>
                 <span ><i class="fa-solid fa-volume-high"></i></span>
-
-                <div class="p-relative timeline-song-container circle-hover" id="voice">
-                    <div class="timeline-song"></div>
+                <div class="p-relative circle-hover" id="voice">
+                    <div class="timeline-voice"></div>
                     <div class="small-timeline-voice-conteiner">
                         <div class="small-timeline-song"></div>
                         <i class="fa-solid fa-circle"></i>
-                    </div>
+                    </div> 
                 </div>
                 
             </div>
-           
         </div>
     </div>
 </body>
