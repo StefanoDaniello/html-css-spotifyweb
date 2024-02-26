@@ -74,7 +74,6 @@ button:hover{
 .sidebar{
     width: 200px;
     background-color: var(--color-secondary);
-    /* flex-shrink: 0; */
 }
 .logo{
     width: 150px;
@@ -89,15 +88,16 @@ button:hover{
    font-weight: bold;
    cursor: pointer;
 }
+
 .sidebar ul li:hover:not(.selected-2) {
     color: var(--color-primary);
  }
  .selected-2 .fa-house,.selected{
     color: var(--color-primary);
  }
-
 .sidebar h4{
     color: var(--color-primary);
+    padding: 10px 0px 10px 12px;
 }
 
 .fa-plus{
@@ -106,11 +106,16 @@ button:hover{
     padding: 10px;
     margin: 0 5px;
 }
-
 .plus-playlist:hover .fa-plus{
     background-color: var(--color-primary);
 }
-
+.playlist-container{
+    min-height: 0;
+}
+.playlist-container ul:last-child{
+    height:100%;
+    overflow-y: auto;
+}
 .app-download i{
   color: var(--color-primary);
   border-radius: 50%;
@@ -128,8 +133,9 @@ button:hover{
 }
 
 .app-download{
+    background-color: var(--color-secondary);
     position: absolute;
-    bottom: 0;
+    bottom: 0; 
 }
 
 
@@ -162,7 +168,7 @@ h2{
 /* playlist  */
 #playlist{
     padding-top: 20px;
-}
+} 
 .card-container{
     width: 100%;
     gap: 20px;
@@ -171,33 +177,33 @@ h2{
 .card{
     width: calc(100% / 6 - 20px);
 }
-
-
+.img-container{
+    margin: 20px 0 20px 0;
+    position: relative;
+}
 .img-container img{
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
+    display: block;
 }
-.img-container i{
-    display: none;
-    position: absolute;
-    top: 0%;
-    font-size: 100px;
-    color: white;
-    cursor: pointer;
-}
-
-.img-container:hover i{
+.card:hover .img-container:after{
+    content: "\f144";
+    font-family: "Font Awesome 6 Free";
+    font-size: 4em;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color:rgba(0, 0, 0, 0.5);
-    height: 99%;
+    position: absolute;
+    left: 0;
+    top: 0;
     width: 100%;
+    height: 100%;
+    color: var(--color-primary);
+    background-color:rgba(0, 0, 0, 0.5);
 }
 
 
+
 .text-container{
+    padding-top: 10px;
     text-align: center;
 }
 
@@ -212,6 +218,22 @@ nav ul li a{
     text-transform: uppercase;
 }
 
+nav a:after{
+    content:"";
+    display: block;
+    height: 3px;
+    width: 60%;
+    margin: 0 auto;
+    background-color: transparent;
+}
+a:hover,
+nav.active:hover{
+    color: var(--color-primary);
+} 
+nav a.active:after,
+nav a:hover:after{
+    background-color:var(--color-light-green)
+}
 
 
 /* toolbar  */
@@ -304,7 +326,7 @@ nav ul li a{
 }
 .timeline-voice{
     border: 3px solid var(--color-nav-text-color);
-    width: 100px;
+    width: 90px;
     border-radius: 10px;
 }
 .down:hover .small-timeline-song, 
@@ -350,18 +372,6 @@ nav ul li a{
     vertical-align: middle;
 }
 /* border-green */
-.border-light-green{
-    border-bottom: 2px solid transparent;
-    width: 50%;
-    margin-left: 25%;
-    padding-top: 5px;
-}
- nav ul li:hover:not(:first-child) .border-light-green{
-    border-color: var(--color-light-green);
-}
-nav ul li:first-child div{ 
-    border-color: var(--color-light-green);
-}
 
 .nav li:not(.selected-2){
     border-left: 2px solid transparent;
@@ -383,7 +393,7 @@ nav ul li:first-child div{
     margin: 0px 20px 0px 10px;
 }
 .circle{
-    border-radius: 100%;
+    border-radius: 50%;
     overflow: hidden;
 }
 
@@ -408,9 +418,12 @@ nav ul li:first-child div{
 .space-bet{
     justify-content: space-between;
 }
-
+.f-colum{
+    flex-direction: column;
+}
 .align-items{
     align-items: center;
+    align-content: center;
 }
 .align-end{
     align-self: flex-end;
@@ -463,13 +476,9 @@ nav ul li:first-child div{
 
 
 @media screen and (max-width:1200px){
-    .img-container i{
-        font-size: 50px;
-    }
 
-    .app-download{
-        padding-top: 10%;
-    }
+
+
 }
 
 @media screen and (max-width:992px){
@@ -480,9 +489,7 @@ nav ul li:first-child div{
     .card{
         width: calc(100% / 4 - 20px);
     }
-    .img-container i{
-        font-size: 50px;
-    }
+   
 
  
 }
@@ -493,9 +500,7 @@ nav ul li:first-child div{
     .card{
         width: calc(100% / 2 - 20px);
     }
-    .img-container i{
-        font-size: 80px;
-    }
+ 
 
 
 }
@@ -509,9 +514,7 @@ nav ul li:first-child div{
     main{
         width: calc(100% - 50px);
     }
-    .img-container i{
-        font-size: 50px;
-    }
+
 
     .sidebar{
         width:50px;
@@ -538,11 +541,8 @@ nav ul li:first-child div{
     .playlist-container{
         display: none;
     }
-    .app-download{
-        padding-top: 750%;
-    }
  
-    #voice{
+    /* #voice{
         display: none;
     }
 
@@ -553,5 +553,6 @@ nav ul li:first-child div{
         right: 0;
         display: block;
         margin: 10%;
-    }  
+    }   */
+
 }
