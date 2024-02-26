@@ -83,13 +83,16 @@ button:hover{
 .logo :last-child{
     display: none;
 }
-.sidebar span{
+.sidebar ul li{
    color: var(--color-nav-text-color);
+   padding: 10px 0px 10px 10px;
+   font-weight: bold;
    cursor: pointer;
 }
-.sidebar .hover-white:hover span{
+.sidebar ul li:hover span{
     color: var(--color-primary);
-}
+ }
+
 .sidebar h4{
     color: var(--color-primary);
 }
@@ -97,20 +100,15 @@ button:hover{
 .fa-plus{
     background-color: var(--color-nav-text-color);
     color: var(--color-secondary);
-    padding: 10px;
+    font-size: 30px;
+    padding: 9px;
+    margin: 0 5px;
 }
-.hover-white{
-    cursor: pointer;
-}
-.plus-playlist{
-    cursor: pointer;
-}
+
 .plus-playlist:hover .fa-plus{
     background-color: var(--color-primary);
 }
-.plus-playlist:hover span{
-    color: var(--color-primary);
-}
+
 .app-download i{
   color: var(--color-primary);
   border-radius: 50%;
@@ -153,6 +151,7 @@ h2{
 }
  p:not(#toolbar p){
     font-size: small;
+    font-weight: bold;
     padding-top: 10px;
     color: var(--color-nav-text-color);
 }
@@ -206,6 +205,7 @@ nav ul li{
 }
 nav ul li a{
     color: var(--color-nav-text-color);
+    font-weight: bold;
     text-transform: uppercase;
 }
 
@@ -356,12 +356,14 @@ nav ul li a{
     border-color: var(--color-light-green);
 }
 
-.left-border{
+.sidebar ul li:not(.plus-playlist){
     border-left: 2px solid transparent;
 }
-.left-border:hover{
+.sidebar ul li:hover{
+    color: var(--color-primary);
     border-color: var(--color-light-green);
-}
+} 
+
 .border-b{
     border-bottom: 1px solid var(--color-primary);
     margin: 0px 20px 0px 10px;
