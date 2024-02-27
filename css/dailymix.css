@@ -21,7 +21,7 @@ ul{
     list-style: none;
 }
 img{
-    width: 100%;
+    width: 50px;
 }
 
 /* general */
@@ -82,6 +82,11 @@ body{
 .libreria .fa-arrow-right:hover {
     color: var(--color-primary);
 }
+.select li{
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 5px;
+}
 .select li a{
     color: var(--color-primary);
     padding: 10px;
@@ -90,8 +95,38 @@ body{
     font-size: 12px;
     background-color: var(--color-nav-text-color);
 }
+.brani{
+    display: flex;
+    align-items: center;
+    padding: 10px 20px 10px 20px;
+}
+.brani-container{
+    height:420px;
+    overflow-y: auto;
+}
+.brani-container::-webkit-scrollbar{
+    display: none;
+}
 
-
+.img-container{
+    margin-right: 10px;
+    width: 50px;
+    height: 50px;
+    overflow: hidden;
+    border-radius: 5px;
+}
+.text-container h4{
+    padding-bottom: 5px;
+    color: var(--color-primary);
+}
+.text-container span:not(.fa-thumbtack){
+    color: var(--color-nav-text-color);
+    font-weight:bold;
+}
+.text-container span .fa-thumbtack{
+    color: green;
+    transform: rotate(45deg);
+}
 /* main  */
 main{
     width: calc(100% - 400px);
