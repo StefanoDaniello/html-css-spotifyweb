@@ -8,7 +8,7 @@
 	--color-primary: #ffffff;
 	--color-secondary: #000000;
 	--color-nav-text-color: #6b6f74;
-    --header-bg: rgb(141 199 186);
+    --header-bg: rgb(115, 187, 171);
     --circle-bg: rgb(33 214 97);
     --user-bg: rgb(253 103 53);
     --trasparent-bg: rgb(129 129 129);
@@ -21,7 +21,7 @@ ul{
     list-style: none;
 }
 img{
-    width: 50px;
+    width: 100%;
 }
 
 /* general */
@@ -68,6 +68,7 @@ body{
 }
 /* sidebar bottom  */
 .sidebar-bottom{
+    overflow: hidden;
     height: calc(100% - 160px);
     border-radius: 10px;
     background-color: var(--sidebar-bg);
@@ -134,10 +135,60 @@ main{
     border-radius: 10px;
     overflow: hidden;
 }
+/* header  */
 header{
     background-color: var(--header-bg);
     height: 350px;
 }
+header div{
+    padding: 5px;
+}
+header .arrow a{
+    padding:10px 15px;
+    border-radius: 50%;
+    color: var(--color-primary);
+    background-color: #0a0a0a91;
+}
+.fa-chevron-right{
+    opacity: 0.5;
+}
+header ul li{
+    padding: 5px;
+}
+.fa-arrow-down{
+    font-size: 10px;
+    padding: 3px;
+    margin-right: 3px;
+    border: 1px solid var(--color-primary);
+    border-radius: 50%;
+}
+.jumbo-container{
+    height: calc(100% - 50px);
+    align-items: end;
+}
+#jumbo{
+   width: 230px;
+   margin-right: 20px;
+   box-shadow: 10px 10px 50px grey;
+}
+.title{
+    margin-left: 20px;
+    color: var(--color-primary);
+}
+h1{
+    font-size: 80px;
+}
+#spotify{
+    margin-left:-10px;
+    width: 40px;
+    height: 40px;
+}
+#spotify img{
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+
 .mix-container{
     height: calc(100% - 350px);
     background-color: rgb(97, 97, 97);
@@ -150,9 +201,141 @@ header{
     background-color: var(--color-secondary);
     height: 90px;
 }
+.img-toolbar{
+    width: 80px;
+    padding: 0% 5%;
+}
+
+.left{
+    width:80%;
+}
+#music a:hover{
+    text-decoration: underline;
+    color: var(--color-primary);
+}
+.right{
+    width: 20%;
+    padding-top: 30px;
+}
+
+.img-text{
+    width: 100%;
+}
+#toolbar h4{
+    color: var(--color-primary);
+}
+#toolbar p{
+    color: var(--color-nav-text-color);
+    font-size: 13px;
+}
+.fa-heart,.fa-folder{
+    color: var(--color-primary);
+    padding: 1px;
+}
+
+.timeline-song-container{
+    width: 40%;
+}
+
+.top{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0px 10px 0px;
+}
+.top span:not(:nth-child(3)){
+    color: var(--color-primary);
+    padding: 0% 3%;
+    font-size: 20px;
+}
+.top span:nth-child(3){
+    color: var(--color-primary);
+    padding: 0% 2%;
+    font-size: 30px;
+}
+.top span:hover{
+    transform: scale(1.2);
+}
+.volume-container span{
+    color: var(--color-primary);
+    padding: 0% 3%;
+}
+.timeline{
+    color: var(--color-primary);
+}
+input[type="range"] {
+    -webkit-appearance: none;
+    width: 100%;
+    margin: 0 10px;
+    height: 7px;
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 5px;
+    background-image: linear-gradient(#ffffff, #ffffff);
+    background-size: 50% 100%;
+    background-repeat: no-repeat;
+}
+input[type="range"]:hover{
+    background-image: linear-gradient(#adff2f, #adff2f);
+}
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background: var(--color-primary);
+    cursor: pointer;
+    box-shadow: 0 0 2px 0 #555;
+}
+ 
+input[type=range]::-webkit-slider-runnable-track  {
+    -webkit-appearance: none;
+    box-shadow: none;
+    border: none;
+    background: transparent;
+}
 
 
 
+
+
+
+/* text utility  */
+.circle{
+    padding:10px 13px;
+    border-radius: 50%;
+    color: var(--color-primary);
+    background-color: #0a0a0a91;
+}
+.circle-2{
+    padding:12px 5px 12px 6px;
+    border-radius: 50%;
+    color: var(--color-primary);
+    background-color: #0a0a0a91;
+}
+.orange-circle{
+    background-color: orangered;
+    color: var(--color-secondary);
+    padding:7px 10px;
+    border-radius: 50%;
+    font-weight: bold;
+}
+
+.button{
+    padding: 10px 15px;
+    border-radius: 20px;
+    font-weight: bold;
+    background-color: var(--color-primary);
+    color: var(--color-secondary);
+}
+.white{
+    background-color: var(--color-primary);
+    color: var(--color-secondary);
+}
+.black{
+    color: var(--color-primary);
+    background-color: #0a0a0a91;
+}
 /* position  */
 .p-relative{
     position: relative;
