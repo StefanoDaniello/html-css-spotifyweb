@@ -37,6 +37,7 @@ body{
 }
 
 .wrapper{
+    width: 100%;
     height: 100vh;
     overflow: hidden;
 }
@@ -90,6 +91,9 @@ button:hover{
    font-weight: bold;
    cursor: pointer;
 }
+.playlist-container ul:last-child li:last-child{
+    padding-bottom: 100px;
+}
 
 .sidebar ul li:hover:not(.selected-2) {
     color: var(--color-primary);
@@ -118,6 +122,21 @@ button:hover{
     height:100%;
     overflow-y: auto;
 }
+.playlist-container ul:last-child::-webkit-scrollbar {
+width: 12px;
+border-radius: 10px;
+}
+.playlist-container ul:last-child::-webkit-scrollbar-track {
+border-radius: 10px;
+border: 1px solid #868686;
+background-color: #303030;
+box-shadow: inset 0 0 6px rgba(255, 255, 255, 0.3);
+}
+.playlist-container ul:last-child::-webkit-scrollbar-thumb {
+background-image: -webkit-gradient(linear, left bottom, left top, color-stop(.5, #1a1a1a), color-stop(1, #8b8b8b));
+border-radius: 10px;
+}
+
 .app-download i{
   color: var(--color-primary);
   border-radius: 50%;
@@ -148,6 +167,20 @@ main{
    background-color: var(--color-main-bg);
    padding: 100px 20px 0px 20px;
    overflow-y: auto;
+}
+main::-webkit-scrollbar {
+width: 12px;
+border-radius: 10px;
+}
+main::-webkit-scrollbar-track {
+border-radius: 10px;
+border: 1px solid #868686;
+background-color: #303030;
+box-shadow: inset 0 0 6px rgba(255, 255, 255, 0.3);
+}
+main::-webkit-scrollbar-thumb {
+background-image: -webkit-gradient(linear, left bottom, left top, color-stop(.5, #1a1a1a), color-stop(1, #8b8b8b));
+border-radius: 10px;
 }
 main h1,h2,h3{
     color: var(--color-primary);
@@ -508,10 +541,10 @@ input[type=range]::-webkit-slider-runnable-track  {
    
 }
 @media screen and (max-width:400px){
+    .card{
+        width: 100%;
+    }
    .none{
-    display: none;
-   }
-   .none-2{
     display: none;
    }
    .fa-volume-high{
