@@ -192,8 +192,21 @@ h1{
 .mix-container{
     height: calc(100% - 350px);
     background-color: rgb(97, 97, 97);
-    
 }
+.toolbar-2 ul li{
+    padding-right: 20px;
+    color: rgb(133, 133, 133);
+    font-size: 25px;
+}
+.toolbar-2  ul li:hover,
+.toolbar-2 span:hover{
+    color: var(--color-primary);
+}
+.toolbar-2 span{
+    font-weight: bold;
+    color: rgb(133, 133, 133);
+}
+
 
 
 /* toolbar  */
@@ -228,7 +241,7 @@ h1{
     color: var(--color-nav-text-color);
     font-size: 13px;
 }
-.fa-heart,.fa-folder{
+#toolbar .fa-heart,.fa-folder{
     color: var(--color-primary);
     padding: 1px;
 }
@@ -296,6 +309,7 @@ input[type=range]::-webkit-slider-runnable-track  {
 }
 
 
+/* borderutility  */
 
 
 
@@ -320,7 +334,14 @@ input[type=range]::-webkit-slider-runnable-track  {
     border-radius: 50%;
     font-weight: bold;
 }
-
+.green-circle{
+    padding:15px 18px;
+    border-radius: 50%;
+    color: var(--color-secondary);
+    background-color: #08e60091;
+    font-size: 20px;
+    cursor: pointer;
+}
 .button{
     padding: 10px 15px;
     border-radius: 20px;
