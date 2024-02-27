@@ -10,8 +10,8 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
 <!-- link css -->
-<link rel="stylesheet" href="style.css">
-    <title>Document</title>
+<link rel="stylesheet" href="css/style.css">
+    <title>html-css-spotifyweb</title>
 </head>
 <body>
     <div class="wrapper">
@@ -173,9 +173,12 @@
                             </div>
                         </div>
                         <div class="card">
-                            <div class="img-container">
-                                <img src="img/mixdaily.jpeg" alt="radar">
-                            </div>
+                            <a href="dailymix.html">
+                                <div class="img-container">
+                                    <img src="img/mixdaily.jpeg" alt="radar">
+                                </div>
+                            </a>
+                           
                         </div>
 
                     </div>
@@ -231,29 +234,17 @@
                 <div class="d-flex timeline align-items">
                     <span>0:25</span>
                     <input type="range">
-                    <!-- <div class="down p-relative circle-hover">
-                        <div class="timeline-song"></div>
-                        <div class="small-timeline-song-conteiner">
-                            <i class="fa-solid fa-circle"></i>
-                            <div class="small-timeline-song"></div>
-                        </div>
-                    </div> -->
-                    <span>0:25</span>
+                    <span>4:25</span>
                 </div>
             </div>
 
-            <div class="d-flex align-items volume-container p-relative">
-                <span><i class="fa-solid fa-bars"></i></span>
-                <span><i class="fa-solid fa-desktop"></i></span>
+            <div class="d-flex align-items volume-container p-relative f-center">
+                
+                <span><i class="fa-solid fa-bars none"></i></span>
+                <span><i class="fa-solid fa-desktop none"></i></span>
                 <span ><i class="fa-solid fa-volume-high"></i></span>
-                <input type="range">
-                <!-- <div class="p-relative circle-hover" id="voice">
-                    <div class="timeline-voice"></div>
-                    <div class="small-timeline-voice-conteiner">
-                        <div class="small-timeline-song"></div>
-                        <i class="fa-solid fa-circle"></i>
-                    </div> 
-                </div> -->
+                <input type="range" class="none-2">
+                
             </div>
         </div>
     </div>
