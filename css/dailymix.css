@@ -63,6 +63,7 @@ body{
 .sidebar-top ul li:hover{
     color: var(--color-primary);
 }
+
 .sidebar-top ul li i{
     margin-right: 10px;
 }
